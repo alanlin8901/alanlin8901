@@ -2,14 +2,14 @@
 
 <img src="https://raw.githubusercontent.com/alanlin8901/alanlin8901/main/assets/tennis-rally.svg" width="100%" alt="Animated tennis rally" />
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&center=true&vCenter=true&width=720&lines=Building+fast+graph+algorithms+on+GPUs;Exploring+parallel+computing+%26+systems;Writing+about+research%2C+software%2C+and+miscellany" alt="Typing SVG" />
-</p>
-
 <p>
   <a href="https://kunyaolin.com"><img src="https://img.shields.io/badge/Portfolio-kunyaolin.com-2ea44f?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
   <a href="https://kunyaolin.com/blog"><img src="https://img.shields.io/badge/Blog-Read%20my%20notes-8250df?style=flat-square&logo=rss&logoColor=white" alt="Blog" /></a>
   <a href="mailto:alan.lin8901@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20me-ea4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&center=true&vCenter=true&width=720&lines=Building+fast+graph+algorithms+on+GPUs;Exploring+parallel+computing+%26+systems;Writing+about+research%2C+software%2C+and+miscellany" alt="Typing SVG" />
 </p>
 
 </div>
