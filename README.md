@@ -70,8 +70,11 @@ Astro-based academic portfolio and technical blog deployed on Netlify.
 ## Latest from my blog
 
 <!-- BLOG-POST-LIST:START -->
-- [Starting Community Detection](https://kunyaolin.com/blog/posts/2025-05-13-starting-community-detection) — 2025-05-13
 - [Mathematical Terminology Rule](https://kunyaolin.com/blog/posts/2025-05-13-mathematical-terminology-rule) — 2025-05-13
+- [Starting Community Detection](https://kunyaolin.com/blog/posts/2025-05-13-starting-community-detection) — 2025-05-13
+- [[Angular] #3 Login Component](https://kunyaolin.com/blog/posts/angular/3_login-component) — 2024-04-26
+- [[SpringBoot] #4 Building Login API](https://kunyaolin.com/blog/posts/springboot/4_build-login-api) — 2024-04-26
+- [[Angular] #2 Angular Router](https://kunyaolin.com/blog/posts/angular/2_angular-route) — 2024-04-19
 <!-- BLOG-POST-LIST:END -->
 
 <p align="right"><a href="https://kunyaolin.com/blog">More posts →</a></p>
