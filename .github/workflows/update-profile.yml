@@ -1,0 +1,147 @@
+name: Update profile content
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Update blog posts and recent releases
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs')
+
+            const owner = context.repo.owner
+            const readmePath = 'README.md'
+            let readme = fs.readFileSync(readmePath, 'utf8')
+
+            function replaceSection(text, startMarker, endMarker, body) {
+              const start = text.indexOf(startMarker)
+              const end = text.indexOf(endMarker)
+              if (start === -1 || end === -1 || end < start) {
+                throw new Error(`Could not find README markers: ${startMarker} / ${endMarker}`)
+              }
+              const before = text.slice(0, start + startMarker.length)
+              const after = text.slice(end)
+              return `${before}\n${body.trim()}\n${after}`
+            }
+
+            function decodeXml(value) {
+              return value
+                .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+                .replace(/&amp;/g, '&')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&quot;/g, '"')
+                .replace(/&apos;/g, "'")
+            }
+
+            // Latest blog posts from the portfolio RSS feed.
+            try {
+              const rssResponse = await fetch('https://kunyaolin.com/rss.xml')
+              if (!rssResponse.ok) throw new Error(`RSS returned ${rssResponse.status}`)
+              const rss = await rssResponse.text()
+              const items = [...rss.matchAll(/<item>([\s\S]*?)<\/item>/g)]
+                .slice(0, 5)
+                .map(match => {
+                  const item = match[1]
+                  const field = name => {
+                    const result = item.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)<\\/${name}>`))
+                    return result ? decodeXml(result[1].trim()) : ''
+                  }
+                  const title = field('title')
+                  const link = field('link')
+                  const pubDate = field('pubDate')
+                  const date = pubDate
+                    ? new Date(pubDate).toISOString().slice(0, 10)
+                    : ''
+                  return `- [${title}](${link})${date ? ` — ${date}` : ''}`
+                })
+
+              if (items.length) {
+                readme = replaceSection(
+                  readme,
+                  '<!-- BLOG-POST-LIST:START -->',
+                  '<!-- BLOG-POST-LIST:END -->',
+                  items.join('\n')
+                )
+              }
+            } catch (error) {
+              core.warning(`Blog update skipped: ${error.message}`)
+            }
+
+            // Most recent published releases across public repositories owned by this account.
+            const repos = await github.paginate(github.rest.repos.listForUser, {
+              username: owner,
+              type: 'owner',
+              sort: 'updated',
+              per_page: 100,
+            })
+
+            const releases = []
+            for (const repo of repos) {
+              if (repo.private || repo.fork || repo.archived) continue
+              try {
+                const response = await github.rest.repos.listReleases({
+                  owner,
+                  repo: repo.name,
+                  per_page: 5,
+                })
+                for (const release of response.data) {
+                  if (release.draft || !release.published_at) continue
+                  releases.push({
+                    repo: repo.name,
+                    name: release.name || release.tag_name,
+                    tag: release.tag_name,
+                    url: release.html_url,
+                    publishedAt: release.published_at,
+                  })
+                }
+              } catch (error) {
+                core.warning(`Could not read releases for ${repo.name}: ${error.message}`)
+              }
+            }
+
+            releases.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+            const latest = releases.slice(0, 5)
+
+            const releaseBody = latest.length
+              ? latest
+                  .map(release => {
+                    const date = new Date(release.publishedAt).toISOString().slice(0, 10)
+                    return `- **[${release.repo}](${release.url})** · ${release.name} — ${date}`
+                  })
+                  .join('\n')
+              : '_No published releases yet. New releases will appear here automatically._'
+
+            readme = replaceSection(
+              readme,
+              '<!-- RECENT-RELEASES:START -->',
+              '<!-- RECENT-RELEASES:END -->',
+              releaseBody
+            )
+
+            fs.writeFileSync(readmePath, readme)
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet README.md; then
+            echo "No profile content changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: refresh profile content"
+          git push
