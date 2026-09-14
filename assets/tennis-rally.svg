@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120" fill="none" role="img" aria-label="Animated tennis rally">
+  <style>
+    .track { fill: rgba(99,102,241,0.08); }
+    .net { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 4 4; }
+    .racket-frame { fill: none; stroke: #334155; stroke-width: 4; }
+    .racket-handle { fill: #8b5e3c; }
+    .ball { fill: #ccff00; stroke: #5b7f00; stroke-width: 1.5; }
+    .shadow { fill: rgba(15,23,42,0.12); }
+    #left-racket { transform-origin: 150px 60px; animation: swing-left 1.6s ease-in-out infinite; }
+    #right-racket { transform-origin: 650px 60px; animation: swing-right 1.6s ease-in-out infinite; }
+    #ball-group { animation: ball-travel 1.6s linear infinite; }
+    #ball-shadow { animation: ball-shadow 1.6s linear infinite; }
+
+    @keyframes swing-left {
+      0%, 100% { transform: rotate(-18deg); }
+      12% { transform: rotate(10deg); }
+      24% { transform: rotate(-6deg); }
+      50% { transform: rotate(-18deg); }
+      62% { transform: rotate(-18deg); }
+      74% { transform: rotate(-18deg); }
+    }
+
+    @keyframes swing-right {
+      0%, 36% { transform: rotate(18deg); }
+      50% { transform: rotate(18deg); }
+      62% { transform: rotate(-10deg); }
+      74% { transform: rotate(6deg); }
+      100% { transform: rotate(18deg); }
+    }
+
+    @keyframes ball-travel {
+      0%   { transform: translate(0px, 0px); }
+      24%  { transform: translate(250px, -14px); }
+      50%  { transform: translate(500px, 0px); }
+      74%  { transform: translate(250px, 14px); }
+      100% { transform: translate(0px, 0px); }
+    }
+
+    @keyframes ball-shadow {
+      0%   { transform: translateX(0px) scaleX(1); opacity: 0.18; }
+      24%  { transform: translateX(250px) scaleX(0.85); opacity: 0.10; }
+      50%  { transform: translateX(500px) scaleX(1); opacity: 0.18; }
+      74%  { transform: translateX(250px) scaleX(0.85); opacity: 0.10; }
+      100% { transform: translateX(0px) scaleX(1); opacity: 0.18; }
+    }
+  </style>
+
+  <rect x="40" y="26" width="720" height="68" rx="34" class="track" />
+  <line x1="400" y1="30" x2="400" y2="90" class="net" />
+
+  <ellipse id="ball-shadow" class="shadow" cx="150" cy="78" rx="12" ry="4" />
+  <g id="ball-group">
+    <circle class="ball" cx="150" cy="60" r="10" />
+  </g>
+
+  <g id="left-racket">
+    <ellipse class="racket-frame" cx="150" cy="52" rx="20" ry="28" />
+    <line class="racket-frame" x1="150" y1="80" x2="150" y2="98" />
+    <rect class="racket-handle" x="145" y="96" width="10" height="18" rx="4" />
+    <line class="racket-frame" x1="138" y1="36" x2="162" y2="68" stroke-width="1.5" opacity="0.6" />
+    <line class="racket-frame" x1="162" y1="36" x2="138" y2="68" stroke-width="1.5" opacity="0.6" />
+    <line class="racket-frame" x1="132" y1="52" x2="168" y2="52" stroke-width="1.5" opacity="0.6" />
+    <line class="racket-frame" x1="150" y1="26" x2="150" y2="78" stroke-width="1.5" opacity="0.6" />
+  </g>
+
+  <g id="right-racket">
+    <ellipse class="racket-frame" cx="650" cy="52" rx="20" ry="28" />
+    <line class="racket-frame" x1="650" y1="80" x2="650" y2="98" />
+    <rect class="racket-handle" x="645" y="96" width="10" height="18" rx="4" />
+    <line class="racket-frame" x1="638" y1="36" x2="662" y2="68" stroke-width="1.5" opacity="0.6" />
+    <line class="racket-frame" x1="662" y1="36" x2="638" y2="68" stroke-width="1.5" opacity="0.6" />
+    <line class="racket-frame" x1="632" y1="52" x2="668" y2="52" stroke-width="1.5" opacity="0.6" />
+    <line class="racket-frame" x1="650" y1="26" x2="650" y2="78" stroke-width="1.5" opacity="0.6" />
+  </g>
+</svg>
