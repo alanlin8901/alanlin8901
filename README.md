@@ -87,13 +87,6 @@ _No published releases yet. New releases will appear here automatically._
 
 <p align="right"><a href="https://github.com/alanlin8901?tab=repositories">All repositories →</a></p>
 
-## GitHub activity
-
-<div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=alanlin8901&show_icons=true&hide_border=true&rank_icon=github" alt="Kun-Yao's GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=alanlin8901&layout=compact&hide_border=true&langs_count=8" alt="Top languages" />
-</div>
-
 ---
 
 <div align="center">
