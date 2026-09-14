@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&height=150&desc=Research%20Assistant%20%7C%20M.S.%20in%20ECE%20%7C%20Parallel%20Computing%20%7C%20Graph%20Algorithms&descAlign=50&descAlignY=45&animation=fadeIn" width="100%" alt="Profile header" />
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&center=true&vCenter=true&width=720&lines=Building+fast+graph+algorithms+on+GPUs;Exploring+parallel+computing+%26+systems;Writing+about+research%2C+software%2C+and+things+I+learn" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&center=true&vCenter=true&width=720&lines=Building+fast+graph+algorithms+on+GPUs;Exploring+parallel+computing+%26+systems;Writing+about+research%2C+software%2C+and+miscellany" alt="Typing SVG" />
 </a>
 
 <p>
@@ -16,14 +16,14 @@
 
 ## About me
 
-I'm currently working as a **Research Assistant**. I hold a **Master's degree in Electronic and Computer Engineering (ECE)** from **National Taiwan University of Science and Technology (NTUST)**. My current work focuses on **parallel computing, graph algorithms, and community detection**, with an emphasis on GPU acceleration and practical high-performance implementations.
+I'm currently working as a Research Assistant. I hold a Master's degree in Electronic and Computer Engineering (ECE) from National Taiwan University of Science and Technology (NTUST). My current work focuses on parallel computing, graph algorithms, and community detection, with an emphasis on GPU acceleration and practical high-performance implementations.
 
-My previous work includes **multimedia chip design and Winograd convolution with Verilog**, machine-learning/data-analysis projects, backend systems using **AWS and Docker**, and research involving data-driven analysis.
+My previous work includes multimedia chip design and Winograd convolution with Verilog, machine-learning/data-analysis projects, backend systems using AWS and Docker, and research involving data-driven analysis.
 
 - 🔬 Current research: GPU-parallel community detection and graph mining
 - ⚙️ Interested in: Parallel Computing · Data Mining · Operating Systems · Software Systems
 - 🧠 I enjoy turning algorithmic ideas into fast, reproducible implementations
-- ✍️ I write notes about research, software, and things I learn at [kunyaolin.com/blog](https://kunyaolin.com/blog)
+- ✍️ I write notes about research, software, and miscellany at [kunyaolin.com/blog](https://kunyaolin.com/blog)
 
 ## Research & engineering stack
 
