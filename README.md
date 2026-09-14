@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=180&text=Kun-Yao%20Lin&fontAlign=50&fontAlignY=35&desc=Graduate%20Student%20%7C%20Parallel%20Computing%20%7C%20Graph%20Algorithms&descAlign=50&descAlignY=58&animation=fadeIn" width="100%" alt="Kun-Yao Lin header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=180&text=Kun-Yao%20Lin&fontAlign=50&fontAlignY=35&desc=Research%20Assistant%20%7C%20Parallel%20Computing%20%7C%20Graph%20Algorithms&descAlign=50&descAlignY=58&animation=fadeIn" width="100%" alt="Kun-Yao Lin header" />
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&center=true&vCenter=true&width=720&lines=Building+fast+graph+algorithms+on+GPUs;Exploring+parallel+computing+%26+systems;Writing+about+research%2C+software%2C+and+things+I+learn" alt="Typing SVG" />
@@ -16,9 +16,9 @@
 
 ## About me
 
-I'm **Kun-Yao Lin**, a Master's student in Electronics at **National Taiwan University of Science and Technology (NTUST)**. My current work focuses on **parallel computing, graph algorithms, and community detection**, with an emphasis on GPU acceleration and practical high-performance implementations.
+I'm **Kun-Yao Lin**, currently working as a **Research Assistant**. My background is in Electronics at **National Taiwan University of Science and Technology (NTUST)**, and my current work focuses on **parallel computing, graph algorithms, and community detection**, with an emphasis on GPU acceleration and practical high-performance implementations.
 
-Before graduate school, I worked on **multimedia chip design and Winograd convolution with Verilog**, machine-learning/data-analysis projects, backend systems using **AWS and Docker**, and research involving data-driven analysis.
+My previous work includes **multimedia chip design and Winograd convolution with Verilog**, machine-learning/data-analysis projects, backend systems using **AWS and Docker**, and research involving data-driven analysis.
 
 - 🔬 Current research: GPU-parallel community detection and graph mining
 - ⚙️ Interested in: Parallel Computing · Data Mining · Operating Systems · Software Systems
