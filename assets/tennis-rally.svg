@@ -46,7 +46,6 @@
   </style>
 
   <rect x="40" y="26" width="720" height="68" rx="34" class="track" />
-  <line x1="400" y1="30" x2="400" y2="90" class="net" />
 
   <ellipse id="ball-shadow" class="shadow" cx="150" cy="78" rx="12" ry="4" />
   <g id="ball-group">
