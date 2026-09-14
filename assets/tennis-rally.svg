@@ -6,10 +6,10 @@
     .racket-handle { fill: #8b5e3c; }
     .ball { fill: #ccff00; stroke: #5b7f00; stroke-width: 1.5; }
     .shadow { fill: rgba(15,23,42,0.12); }
-    #left-racket { transform-origin: 150px 60px; animation: swing-left 1.6s ease-in-out infinite; }
-    #right-racket { transform-origin: 650px 60px; animation: swing-right 1.6s ease-in-out infinite; }
-    #ball-group { animation: ball-travel 1.6s linear infinite; }
-    #ball-shadow { animation: ball-shadow 1.6s linear infinite; }
+    #left-racket { transform-origin: 150px 60px; animation: swing-left 3.3s ease-in-out infinite; }
+    #right-racket { transform-origin: 650px 60px; animation: swing-right 3.3s ease-in-out infinite; }
+    #ball-group { animation: ball-travel 3.3s linear infinite; }
+    #ball-shadow { animation: ball-shadow 3.3s linear infinite; }
 
     @keyframes swing-left {
       0%, 100% { transform: rotate(-18deg); }
