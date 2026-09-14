@@ -6,7 +6,7 @@
 
 <p>
   <a href="https://kunyaolin.com">
-    <img src="https://img.shields.io/badge/👤%20Portfolio-kunyaolin.com-2ea44f?style=flat-square" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/👤%20Portfolio-More%20about%20me-2ea44f?style=flat-square" alt="Portfolio" />
   </a>
   <a href="https://kunyaolin.com/blog"><img src="https://img.shields.io/badge/Blog-Read%20my%20notes-8250df?style=flat-square&logo=markdown&logoColor=white" alt="Blog" /></a>
   <!-- <a href="mailto:alan.lin8901@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20me-ea4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a> -->
